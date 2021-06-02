@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'ajout-article',
     loadChildren: () => import('./ajout-article/ajout-article.module').then( m => m.AjoutArticlePageModule)
   },
+  {
+    path: 'article-view/:idArticle',
+    loadChildren: () => import('./article-view/article-view.module').then( m => m.ArticleViewPageModule)
+  },
 ];
 
 @NgModule({

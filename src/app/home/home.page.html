@@ -8,13 +8,16 @@
 
 <ion-content [fullscreen]="true">
   <!-- Liste des articles -->
-  <ion-card *ngFor="let article of articleService.listArticles">
+  <ion-card *ngFor="let article of articleService.listArticles; let i = index">
     <ion-card-header>
-      <ion-card-title>{{article.titre}}</ion-card-title>
+      <ion-card-title>{{i}} - {{article.titre}}</ion-card-title>
     </ion-card-header>
   
     <ion-card-content>
       {{article.contenue}}
+      <br>
+      <p>Notation : 0 </p>
+        <ion-button slot="end" size="small" (click)="ouvrirArticle(i)">Ouvrir</ion-button>
     </ion-card-content>
   </ion-card>
   

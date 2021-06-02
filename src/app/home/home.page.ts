@@ -15,4 +15,8 @@ export class HomePage {
     //Redirige vers l'url localhost:8100/ajout-article
     this.router.navigate(['ajout-article']);
   }
+
+  ouvrirArticle(index: number) {
+    this.router.navigate(['article-view', index]);//Récupère les paramètres et convertis en "localhost:8100/article-view/index"
+  }
 }
