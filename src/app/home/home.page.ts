@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { ArticleService } from '../service/article.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,10 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(public articleService: ArticleService, public router: Router) {}
 
+  goToAjoutArticle() {
+    //Redirige vers l'url localhost:8100/ajout-article
+    this.router.navigate(['ajout-article']);
+  }
 }
