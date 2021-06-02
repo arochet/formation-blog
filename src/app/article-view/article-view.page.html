@@ -14,5 +14,9 @@
 </ion-content>
 
 <ion-footer>
-  
+  <ion-toolbar class="ion-text-center">
+    <ion-button slot="start" (click)="diminuerNote()">-</ion-button>
+    <ion-label>Notation : {{notation}}</ion-label>
+    <ion-button slot="end" (click)="augmenterNote()">+</ion-button>
+  </ion-toolbar>
 </ion-footer>

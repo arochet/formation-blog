@@ -1,6 +1,7 @@
 export class Article {
     titre: string = "";
     contenue: string = "";
+    notation: number = 0;
 
     constructor(t: string, c: string) {
         this.titre = t;
